@@ -39,28 +39,25 @@ node server.js
 
 Server akan berjalan dan mendengarkan koneksi di ws://localhost:8080/api/v1/ussd.
 ```
-2. Menjalankan Front-end (Client)
-```bash
-    Buka file index.html langsung melalui browser Anda.
+### 2. Menjalankan Front-end (Client)
+* Buka file index.html langsung melalui browser Anda atau (Disarankan) gunakan ekstensi seperti Live Server di VS Code agar lebih optimal.
+* Klik tombol "Start Demo", ketik *363# pada layar dialer, lalu tekan tombol panggil.
 
-    Atau (Disarankan) gunakan ekstensi seperti Live Server di VS Code agar lebih optimal.
-
-    Klik tombol "Start Demo", ketik *363# pada layar dialer, lalu tekan tombol panggil.
-
-📡 Format Komunikasi WebSocket
-
-Aplikasi ini menggunakan format JSON sederhana untuk bertukar data antara client dan server.
+### 3. Format Komunikasi WebSocket
+* Aplikasi ini menggunakan format JSON sederhana untuk bertukar data antara client dan server.
 
 Format Request (Client ke Server):
+```bash
 JSON
 
 {
   "option": 1
 }
-
+```
 *(Catatan: option: 0 digunakan sebagai trigger awal saat memanggil 363#)
 
 Format Response (Server ke Client):
+```bash
 JSON
 
 {
@@ -72,13 +69,11 @@ JSON
   ],
   "end": false
 }
-
-    description: Teks header/judul menu USSD.
-
-    menu: Array berisi daftar opsi paket yang bisa dipilih.
-
-    end: Bernilai true jika sesi USSD telah selesai (misal: setelah berhasil membeli paket), yang akan memicu penutupan dialog dan koneksi.
 ```
+* description: Teks header/judul menu USSD.
+* menu: Array berisi daftar opsi paket yang bisa dipilih.
+* end: Bernilai true jika sesi USSD telah selesai (misal: setelah berhasil membeli paket), yang akan memicu penutupan dialog dan koneksi.
+
 📄 Lisensi
 
 Hak Cipta © 2026 - Tugas Implementasi dan Pengujian Perangkat Lunak.
