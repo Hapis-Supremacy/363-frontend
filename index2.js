@@ -80,7 +80,13 @@ function initWebSocket() {
         dialog.classList.remove('hidden');
         dialog.classList.add('flex');
         ussdText.innerHTML = "<b>Connection Error</b><br>Gagal terhubung ke server.";
+        
         ussdInput.style.display = 'none';
+        
+        btnNormal.classList.add('hidden');
+        btnNormal.classList.remove('flex');
+        btnEnd.classList.remove('hidden');
+        btnEnd.classList.add('flex');
     };
 
     ws.onclose = () => {
