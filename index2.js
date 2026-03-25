@@ -79,7 +79,7 @@ function initWebSocket() {
         loader.classList.add('hidden');
         dialog.classList.remove('hidden');
         dialog.classList.add('flex');
-        ussdText.innerHTML = "<b>Connection Error</b><br>Gagal terhubung ke server. Pastikan server.js sudah jalan.";
+        ussdText.innerHTML = "<b>Connection Error</b><br>Gagal terhubung ke server.";
         ussdInput.style.display = 'none';
     };
 
