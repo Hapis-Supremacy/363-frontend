@@ -47,7 +47,7 @@ project/
 │   └── helvetica-neue/      # Aset font lokal
 ├── src/
 │   ├── main.js              # Entry point — menghubungkan semua event listener
-│   └── js/
+│   └── services/
 │       ├── navigation.js    # Logika perpindahan halaman (main ↔ demo)
 │       ├── dialer.js        # Logika input dial pad
 │       └── ussd.js          # Koneksi WebSocket & manajemen dialog USSD
